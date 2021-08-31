@@ -1,8 +1,9 @@
-package imaginist.boot;
+package com.imaginist.boot;
 
-import imaginist.boot.bean.Pet;
-import imaginist.boot.bean.User;
-import imaginist.boot.config.MyConfig;
+import ch.qos.logback.core.db.DBHelper;
+import com.imaginist.boot.bean.Pet;
+import com.imaginist.boot.config.MyConfig;
+import com.imaginist.boot.bean.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -32,8 +33,20 @@ public class HelloWorldMainApplication {
         User user02 = myConfig.user01();
         System.out.println(user01 == user02);
 
+        // 4. 组件依赖
         User user = run.getBean("user01", User.class);
         Pet tomcat = run.getBean("tom", Pet.class);
         System.out.println(user.getTomcat() == tomcat); // true (proxyBeanMethods = true) 组件依赖
+
+        // 5. @Import获取组件
+        String[] beanNamesForType = run.getBeanNamesForType(User.class);
+        for (String s : beanNamesForType) {
+            System.out.println(s);
+        }
+        System.out.println(run.getBean(DBHelper.class));
+
+        // 6. @ImportResource方法测试
+        System.out.println(run.getBean("haha"));
+        System.out.println(run.getBean("hehe"));
     }
 }

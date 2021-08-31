@@ -1,10 +1,13 @@
-package imaginist.boot.bean;
+package com.imaginist.boot.bean;
 
 public class Pet {
     private String name;
 
     public Pet(String name) {
         this.name = name;
+    }
+
+    public Pet() {
     }
 
     @Override

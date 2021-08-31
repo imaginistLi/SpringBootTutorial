@@ -1,8 +1,11 @@
-package imaginist.boot.bean;
+package com.imaginist.boot.bean;
 
 public class User {
     private String name;
     private Integer age;
+
+    public User() {
+    }
 
     public Pet getTomcat() {
         return tomcat;
