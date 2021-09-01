@@ -1,25 +1,14 @@
 package com.imaginist.boot.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@ToString
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Pet {
     private String name;
-
-    public Pet(String name) {
-        this.name = name;
-    }
-
-    public Pet() {
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }

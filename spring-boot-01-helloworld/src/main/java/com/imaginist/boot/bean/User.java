@@ -1,40 +1,20 @@
 package com.imaginist.boot.bean;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@ToString
+@Data
+@NoArgsConstructor
 public class User {
     private String name;
     private Integer age;
-
-    public User() {
-    }
-
-    public Pet getTomcat() {
-        return tomcat;
-    }
-
-    public void setTomcat(Pet tomcat) {
-        this.tomcat = tomcat;
-    }
-
     private Pet tomcat;
 
     public User(String name, Integer age) {
         this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
         this.age = age;
     }
 }

@@ -48,5 +48,7 @@ public class HelloWorldMainApplication {
         // 6. @ImportResource方法测试
         System.out.println(run.getBean("haha"));
         System.out.println(run.getBean("hehe"));
+
+        System.out.println(run.getBeanDefinitionCount());
     }
 }
