@@ -1,0 +1,6 @@
+spring:
+  mvc:
+    static-path-pattern: /res/**
+
+  resources:
+    static-locations: classpath:/haha/ # 设置静态资源访问路径,但是在我这不管用
