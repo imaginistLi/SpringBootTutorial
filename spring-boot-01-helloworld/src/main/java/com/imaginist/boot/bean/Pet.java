@@ -11,4 +11,5 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Pet {
     private String name;
+    private Double weights;
 }

@@ -1,0 +1,26 @@
+person:
+  userName: zhangsan
+#  userName: 'zhangsan \n haha'
+#  userName: "zhangsan \n haha"
+  # 双引号不会转义，单引号回转义：双引号会将\n作为回车输出，单引号会将\n作为字符串输出
+  boss: true
+  birthday: 2021/9/2
+  age: 18
+  pet:
+    name: dog
+    weights: 20
+  # interests: [basketable, football]
+  interests:
+    - basketball
+    - football
+  animals: [dog, cat]
+#  score: {english:80, math:100}
+  score:
+    english: 80
+    math: 100
+  salarys: [999.98, 999.99]
+  allPets:
+    good:
+      - {name: dog, weights: 30.0}
+      - name: cat
+        weights: 15.0

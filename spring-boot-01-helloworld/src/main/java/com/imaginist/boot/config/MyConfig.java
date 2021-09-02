@@ -37,6 +37,6 @@ public class MyConfig {
 
     @Bean("tom")  // 自定义名字
     public Pet tomcat(){
-        return new Pet("tomcat");
+        return new Pet("tomcat", 10.0);
     }
 }

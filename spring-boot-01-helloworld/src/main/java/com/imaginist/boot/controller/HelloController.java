@@ -1,6 +1,7 @@
 package com.imaginist.boot.controller;
 
 import com.imaginist.boot.bean.Car;
+import com.imaginist.boot.bean.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,9 @@ public class HelloController {
     @Autowired
     private Car car;
 
+    @Autowired
+    private Person person;
+
     @RequestMapping("/car")
     public Car mycar(){
         return car;
@@ -24,5 +28,10 @@ public class HelloController {
     public String hello(){
         log.info("请求进来了！");
         return "Hello, Spring Boot 2!";
+    }
+
+    @RequestMapping("/person")
+    public Person getPerson(){
+        return person;
     }
 }
